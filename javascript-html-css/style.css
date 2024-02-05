@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 body{
     height: 100vh;
@@ -20,6 +21,7 @@ body{
 h1{
     border-bottom: 5px solid lightgrey;
     padding-bottom: 10px;
+    font-family: 'Protest Riot', sans-serif;
 }
 
 .parag{
