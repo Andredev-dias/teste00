@@ -38,15 +38,15 @@ h1{
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    gap: 50px;
+    /* gap: 50px; */
 }
 
 .cards{
     width: 200px;
-    height: auto;
+    height: 400px;
     padding: 20px;
     display: flex;
     flex-direction: column;
