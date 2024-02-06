@@ -18,11 +18,12 @@ function media(){
         x.style.background = "green"
         resboa.style.display = "block"
         resboa.style.color = "green"
+        resruim.style.display = "none";
     } else {
         x.style.background = "red"
         resruim.style.display = "block"
         resruim.style.color = "red"
-
+        resboa.style.display = "none";
     }
     document.getElementById("resMedia").textContent = resMedia.toFixed(2);
 
