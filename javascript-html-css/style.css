@@ -97,4 +97,12 @@ button:hover{
   border: 2px solid #3560b0;
 }
 
+.condicional{
+    display: none;
+}
+
+.condicionalNegada{
+    display: none;
+}
+
 
