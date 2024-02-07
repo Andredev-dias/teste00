@@ -6,14 +6,18 @@
 html{
     scroll-behavior: smooth;
 }
+body{
+    font-family: 'Poppins', sans-serif;
+}
 
 header{
     background-color: white;
     width: 100%;
-    height: 30px;
+    height: 50px;
     position: fixed;
     top: 0;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 999;
 }
 
 ul{
@@ -27,7 +31,7 @@ ul{
 }
 
 li{
-    padding-top: 5px;
+    padding-top: 15px;
 }
 
 a{
@@ -45,32 +49,64 @@ a:hover{
 }
 
 .profile01{
+    display:flex ;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
     width: 100%;
-    height: 800px;
-    background-color: #12372A;
-    padding-top: 30px;
+    height:auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #ffffff;
+}
+.left-profile01{
+    width: 500px;
     display:flex ;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
+
+.right-profile02{
+    width:600px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 30px;
+}
+.nome-p1{
+    font-size: 3.2rem;
+    color: #2f384e;
+}
+.p-p1{
+    font-size: 1.6rem;
+    color: #373f53;
+    line-height: 40px;
+
+}
 .rel{
     position: relative;
     width: 500px;
     height: 500px;
-    overflow: hidden;
-    border-radius: 100%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 100%;
+    overflow: hidden;
 }
 .img-01{
     position: absolute;
-    left: -200px;
+    left: -50px;
+    width: auto;
+    height: 500px;
     transition: all 400ms linear;
 }
 .img-01:hover{
-   transform: scale(1.2);
-   cursor: pointer;
-   transition: all 400ms linear;
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 400ms linear;
 }
 .profile02{
     width: 100%;
@@ -89,8 +125,45 @@ a:hover{
 .contact{
     width: 100%;
     height: 500px;
-    background-color: red;
+    background-color: #ffffff;
     padding-top: 30px;
 
 }
+
+@media only screen and (max-width: 600px) {
+    .nome-p1{
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+        padding-top: 6vh;
+    }
+    .p-p1{
+        line-height: 30px;
+        padding: 30px;
+        font-size: 1.2rem;
+    }
+    .rel{
+        position: relative;
+        width: 300px;
+        height: 300px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        border-radius: 100%;
+        overflow: hidden;
+    }
+    .img-01{
+        position: absolute;
+        left: -50px;
+        width: auto;
+        height: 300px;
+        transition: all 400ms linear;
+    }
+  }
+
+  
+  @media only screen and (max-width: 500px) {
+    .nome-p1{
+        padding-top: 13vh;
+    }
+  }
+
 
