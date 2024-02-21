@@ -8,6 +8,7 @@ html{
 }
 body{
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 header{
@@ -117,9 +118,15 @@ a:hover{
 }
 .tec{
     width: 100%;
-    height: 500px;
+    height: auto;
     background-color: grey;
     padding-top: 30px;
+    padding-bottom: 30px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 }
 .contact{
@@ -128,6 +135,22 @@ a:hover{
     background-color: #ffffff;
     padding-top: 30px;
 
+}
+
+.flex-cards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
 }
 
 @media only screen and (max-width: 600px) {
@@ -166,4 +189,6 @@ a:hover{
     }
   }
 
+
+  
 
