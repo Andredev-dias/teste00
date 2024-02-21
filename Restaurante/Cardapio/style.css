@@ -12,6 +12,8 @@ body{
     width: 100%;
     height: auto;
     overflow-x: hidden;
+    padding-top: 4vh;
+    padding-bottom:4vh ;
 }
 
 .wrap-card{
@@ -21,3 +23,12 @@ body{
     justify-content: center;
     gap: 4vh;
 }
+
+
+@media only screen and (min-width: 1024px) {
+    .wrap-card{
+        width: 100vw;
+        flex-direction: row;
+        gap: 2vw;
+    }
+  }
