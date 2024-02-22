@@ -41,3 +41,9 @@ body{
     color: rgb(97, 26, 26);
     border-radius: 20px;
 }
+
+@media (width >= 1024px){
+    body{
+        align-items: center;
+    }
+}
