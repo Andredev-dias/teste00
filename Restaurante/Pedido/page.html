@@ -10,6 +10,11 @@
     <script src="script.js"></script>
 </head>
 <body>
+    <div id="error" class="error-modal">
+        <p>Insira um nome para começar</p>
+        <br>
+        <button class="error-btn" onclick="fechar()">Entendi!!!</button>
+    </div>
     <div class="btn-group" role="group" aria-label="Basic example">
         <button onclick="window.location.href='../Menu/page.html'" type="button" class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
           <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
@@ -29,8 +34,37 @@
     </div>
     <button onclick="comecar()" type="button" class="btn btn-dark">Começar</button>
 
-    <div class="selects-div">
+    <div id="selects-div">
         <h2>Olá <span id="nomePrint"></span> vamos começar seu pedido!!!</h2>
+        <h3>Escolha sua refeição</h3>
+       <br>
+        <h5>Prato</h5>
+        <select id="selectPrato" class="form-select" aria-label="Default select example">
+            <option selected>Selecione um prato</option>
+            <option value="1">Prato feito</option>
+            <option value="2">Strogonof</option>
+            <option value="3">Prato Vegano</option>
+          </select>
+       <br>
+          <h5>Bebida</h5>
+          <select id="selectBebida" class="form-select" aria-label="Default select example">
+              <option selected>Selecione uma bebida</option>
+              <option value="1">Agua</option>
+              <option value="2">Refrigerante</option>
+              <option value="3">Suco de laranja</option>
+            </select>
+       <br>
+            <h5>Sobremesa</h5>
+            <select id="selectSobremesa" class="form-select" aria-label="Default select example">
+                <option selected>Selecione um sobremesa</option>
+                <option value="1">Torta de morango</option>
+                <option value="2">Pudim de leite</option>
+                <option value="3">Tiramissu</option>
+              </select>
+              <br>
+            <button onclick="calcularTotal()" type="button" class="btn btn-outline-success">Fazer pedido</button>
+            <button onclick="limpar()" type="button" class="btn btn-outline-warning">Limpar</button>
+        
     </div>
 
     </body>
