@@ -145,7 +145,7 @@
             characters.forEach((character) => {
                 const characterName = character.querySelector("h3").textContent.toLowerCase();
                 if(characterName.includes(searchTerm)){
-                    character.style.display = "block"
+                    character.style.display = "flex"
                 }else{
                     character.style.display = "none"
                 }
