@@ -74,7 +74,6 @@ input:focus {
     padding: 10px;
     background-color: lightpink;
     border-radius: 10px;
-    display: flex;
     flex-direction: column;
     gap: 1vh;
     display: none;

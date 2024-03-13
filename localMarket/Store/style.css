@@ -4,9 +4,18 @@
     font-family: "Poppins", sans-serif;
 }
 body{
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden;
     padding: 2em;
     background-image: url("../Images/background.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+}
+
+.idPerfil{
+    display: flex;
+    gap: 10px;
+    color: #ffff;
 }
