@@ -44,6 +44,44 @@ $(document).ready(function(){
 });
 
 function gerarDocumentoWord(){
-    
+    const listaElement = document.getElementById("lista");
+    const totalElement = document.getElementById("total");
+
+    //clona a lista para evitar modificacoes diretas na original
+    const listaClone = listaElement.cloneNode(true);
+
+    //remover o botao de remove do word
+    $(listaClone).find("button").remove();
+
+    const listaHtml = listaClone.innerHTML;
+    const totalHtml = totalElement.innerHTML;
+
+    const conteudoHtml = `
+        <html>
+            <head>
+            <meta charset="UTF-8" />
+            </head>
+            <body>
+                <h1>PEDIDO CONFIRMADO</h1>
+                <h3>Agradecemos sua preferencia</h3>
+                <br/>
+                ${listaHtml}
+                <br/><br/>
+                ${totalHtml}
+            </body>
+        </html>
+    `;
+
+    const blob = new Blob([conteudoHtml], {type: "application/msword" });
+    const link = document.createElement("a");
+
+    link.href = URL.createObjectURL(blob);
+    link.dowload = "carrinho.doc";
+    link.click();
+    document.getElementById("pedido").style.display = "block";
 }
 
+function successClose(){
+    document.getElementById("pedido").style.display = "none"
+    // $('#pedido').css({display: 'none'})
+}
