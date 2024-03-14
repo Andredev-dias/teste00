@@ -20,12 +20,30 @@ $(document).ready(function(){
             const listItem = $("<li>").text(
                 `${item.descricao} - Preço: R$ ${item.preco.toFixed(2)}`
             );
-                
+
+            const removeButton = $("<button>")
+            .text("❌")
+            .css("margin-left", "10px")
+            .click(function(){
+                removerItemDoCarrinho(index);
+            })
+            listItem.append(removeButton)
             listaElement.append(listItem);
             totalPreco += item.preco;
         });
 
         totalElement.text(`Total: R$ ${totalPreco.toFixed(2)}`);
     }
+    function removerItemDoCarrinho(index){
+        carrinho.splice(index, 1);
+        localStorage.setItem("carrinho", JSON.stringify(carrinho));
+        exibirCarrinho();
+    }
+
     exibirCarrinho();
-})
+});
+
+function gerarDocumentoWord(){
+    
+}
+
